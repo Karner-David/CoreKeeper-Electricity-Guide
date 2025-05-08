@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ckelectric-dev-6494b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::603195189312:role/amplify-ckelectric-dev-6494b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::603195189312:role/amplify-ckelectric-dev-6494b-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-ckelectric-dev-6494b-deployment",
+      "UnauthRoleName": "amplify-ckelectric-dev-6494b-unauthRole",
+      "StackName": "amplify-ckelectric-dev-6494b",
+      "StackId": "arn:aws:cloudformation:us-east-2:603195189312:stack/amplify-ckelectric-dev-6494b/990d5c70-2bb5-11f0-b312-02e6ade874e9",
+      "AmplifyAppId": "d8jfyld4cvf9p"
+    },
+    "categories": {
+      "api": {
+        "ckelectric": {}
+      }
+    }
+  }
+}

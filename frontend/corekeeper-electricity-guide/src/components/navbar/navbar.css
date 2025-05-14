@@ -1,0 +1,58 @@
+.navbar-container {
+    background-image: url("/Contraptions_Screen.png");
+    background-size: 120% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 11vh;
+    width: 100%;
+}
+
+.img-container {
+    margin: 0.5vh;
+}
+
+.img-logo {
+    height: 100%;
+    width: 100%;
+}
+
+.top-tab-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 18vw;
+}
+
+.tab-title {
+    margin: 3vw;
+    color: #FEFE00;
+    font-family: "Daydream";
+    font-size: medium;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.tab-title.active {
+    color: white;
+}
+
+.tab-title:hover {
+    color: white;
+}
+
+.feedback-container {
+    font-family: "Daydream";
+    margin-top: 1vh;
+}
+
+.feedback-h1 {
+    font-size: small;
+    color: #4FB9F0;
+}

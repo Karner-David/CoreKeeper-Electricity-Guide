@@ -1,0 +1,32 @@
+.item-image {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+
+.crafting-table {
+  width: 100%;                
+}
+
+.table-responsive {
+  overflow-x: auto;         
+  overflow-y: hidden;   
+}
+
+.table-responsive table {
+  width: auto !important;   
+  table-layout: auto;       
+}
+
+.table-responsive th,
+.table-responsive td {
+  padding: 0.25rem;         
+  font-size: 0.85rem;       
+}
+
+.crafting-table .item-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}

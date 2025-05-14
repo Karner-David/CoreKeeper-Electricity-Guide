@@ -1,0 +1,19 @@
+.search-page-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #1A1919;
+    padding: 3vh;
+    flex-direction: column;
+}
+
+.feed-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 3vh;
+    width: 70%;
+    gap: 5px;
+    justify-content: center;
+}

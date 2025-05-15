@@ -16,6 +16,11 @@ export default function SearchBar({ onSearch }) {
         }
     }
 
+    const imgClickedOn = () => {
+        onSearch(inputVal);
+        setInputVal('');
+    }
+
     const searchBarStyle = {
         display: "flex",
         height: "4vh",
@@ -24,27 +29,32 @@ export default function SearchBar({ onSearch }) {
         border: "1px solid black",
         borderRadius: "30px",
         backgroundColor: "#D9D9D9",
+        alignItems: "center",
+        overflow: "hidden",
     }
 
     const imgStyle = {
         height: "30px",
-        width: "30px"
+        width: "30px",
+        cursor: "pointer",
     }
 
     const inputStyle = {
-        width: "100%",
-        height: "100%",
-        border: "0px solid black",
-        borderRadius: "30px",
+        flex: 1,                    // fills remaining space
+        border: "none",
         backgroundColor: "#D9D9D9",
-        paddingRight: "10px"
+        padding: "0",
+        paddingRight: "5px",          // left+right padding
+        outline: "none",
     }
 
     return(
         <>
             <div className="search-bar-container" style={searchBarStyle}>
                 <div className="img-container" style={imgStyle}>
-                    <img src={MagnifyingGlass} alt="magnifying glass" 
+                    <img src={MagnifyingGlass} 
+                         alt="magnifying glass"
+                         onClick={imgClickedOn} 
                         
                     />
                 </div>

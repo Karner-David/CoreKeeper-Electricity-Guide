@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './searchfeeditem.css';
 import CraftingTable from '../crafting-table/craftingtable';
+import ItemBg from '../item-bg';
 
-export default function SearchFeedItem({iName, iDesc, iImg, iMaterials}) {
+export default function SearchFeedItem({iName, iDesc, iImg, iMaterials, iMImgs, iStation, iSImg}) {
 
 
 
@@ -11,7 +12,19 @@ export default function SearchFeedItem({iName, iDesc, iImg, iMaterials}) {
         <div className="feed-item-container">
             <h2>{iName}</h2>
             <p>{iDesc}</p>
-            <CraftingTable></CraftingTable>
+            {iMaterials !== "None" ? (
+                <CraftingTable
+                    iName={iName}
+                    iDesc={iDesc}
+                    iImg={iImg} 
+                    iMaterials={iMaterials} 
+                    iMImgs={iMImgs} 
+                    iStation={iStation}
+                    iSImg={iSImg}
+                />
+            ) : (
+                <ItemBg itemImg={iImg} width="38%" height="42%"></ItemBg>
+            )}
         </div>
         </>
     );

@@ -12,14 +12,19 @@
 }
 
 .feed-item-container h2 {
-    font-size: 23px;
+    font-size: 28px;
     margin-bottom: 0;
     color: #F3f3f3;
+    font-family: GBB;
+    /* font-size: ; */
 }
 
 .feed-item-container p {
     flex-grow: 1; 
     margin: 0;
+    margin-bottom: 2px;
+    font-family: Lineto-Circular;
+    font-size: large;
 }
 
 .img-material-container {

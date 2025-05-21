@@ -8,16 +8,17 @@ import awsExports from '../../../backend/src/aws-exports.js';
 import { ThemeProvider, defaultTheme } from '@aws-amplify/ui-react';
 
 import App from './App.jsx';
-
+import { BrowserRouter } from 'react-router-dom';
 
 Amplify.configure(awsExports);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider theme={defaultTheme}>
-      <App />
+    <BrowserRouter>
+      <ThemeProvider theme={defaultTheme}>
+        <App />
 
-    </ThemeProvider>
-    
+      </ThemeProvider>
+    </BrowserRouter>
   </StrictMode>,
 );

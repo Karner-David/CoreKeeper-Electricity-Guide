@@ -26,6 +26,7 @@ export default function SearchBar({ onSearch }) {
         height: "4vh",
         width: "40vw",
         margin: "auto",
+        // marginLeft: "31.30vw",
         border: "1px solid black",
         borderRadius: "30px",
         backgroundColor: "#D9D9D9",
@@ -40,11 +41,11 @@ export default function SearchBar({ onSearch }) {
     }
 
     const inputStyle = {
-        flex: 1,                    // fills remaining space
+        flex: 1,                    
         border: "none",
         backgroundColor: "#D9D9D9",
         padding: "0",
-        paddingRight: "5px",          // left+right padding
+        paddingRight: "5px",          
         outline: "none",
     }
 

@@ -1,0 +1,35 @@
+.down-arrow {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.down-arrow:not(.active):hover {
+  transform: translateY(5px);
+}
+
+.down-arrow.active {
+    transform: rotate(180deg);
+}
+
+.down-arrow.active:hover {
+   transform: rotate(180deg) translateY(5px);
+}
+
+.contraption-name-arrow-container {
+    display: flex;
+    align-items: center;
+}
+
+.contraption-content-container {
+    /* flex-direction: column; */
+}
+
+#ci-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#cii-center {
+    margin: auto;
+}

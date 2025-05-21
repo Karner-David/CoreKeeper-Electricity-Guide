@@ -236,7 +236,6 @@ export default function SearchFeedPage({}) {
 
     return(
         <div>
-            <NavBar/>
             <div className="search-page-container">
                 <SearchBar></SearchBar>
                 <div className="feed-container">

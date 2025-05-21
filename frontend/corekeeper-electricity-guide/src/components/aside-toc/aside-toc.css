@@ -1,0 +1,15 @@
+.aside-text {
+  text-decoration: none;
+  color: #5B5A5A;
+  font-size: 25px;
+  display: block;
+  margin: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+.aside-text.active,
+.aside-text:hover {
+  color: #F3F3F3;
+}
+
+

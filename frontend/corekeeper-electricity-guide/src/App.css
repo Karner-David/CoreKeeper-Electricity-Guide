@@ -2,7 +2,6 @@ html, body {
   background-color: rgb(238, 238, 238);
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
@@ -24,7 +23,6 @@ html, body {
 #root {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .row {

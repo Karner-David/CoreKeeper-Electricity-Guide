@@ -1,0 +1,116 @@
+#basics-gif {
+    border: 2px solid #1A1919;
+    border-radius: 30px;
+    margin: 2vh;
+    height: 100%;
+    width: 40%;
+}
+
+#basics-gif-triple {
+    border: 2px solid #1A1919;
+    border-radius: 30px;
+    margin: 2vh;
+}
+
+#basics-gif-special {
+    border: 2px solid #1A1919;
+    border-radius: 30px;
+    margin: 2vh;
+    height: 100%;
+    width: 40%;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+}
+
+.basics-container {
+    display: grid;
+    grid-template-areas: 
+        "title   title   title"
+        "aside   content   right"
+        "footer   footer   footer"
+        ;
+
+    grid-template-columns: 2fr 9fr 2fr;
+    grid-template-rows: 100px auto 70px;
+    justify-items: center;
+    align-items: center;        
+    background-color: #1A1919;
+    width: 100%;
+}
+
+.basics-container h1{
+    margin: 3vh 0;
+    font-family: DayDream;
+    color: #4FB9F0;
+    grid-area: title;
+}
+
+.basics-aside {
+    display: flex;
+    grid-area: aside;
+    align-self: start;
+    justify-self: start;
+    height: auto;
+    top: 5vh;
+    position: sticky;
+    margin: 1rem 2vw;
+    margin-left: vw;
+}
+
+.border-article-container {
+    grid-area: content;
+    /* display: flex; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 2px solid #8F9EBA;
+    margin: 1vh;
+    margin-top: 0;
+}
+
+.basics-article-container {
+    width: 100%;
+    height: 100%;
+    padding: 2vh;
+    /* border: 1px solid white; */
+}
+
+.basics-article-container h3 {
+    font-family: GBB;
+    color: #F3f3f3;
+    font-size: 45px;
+}
+
+.basics-article-container p,
+.basics-article-container li {
+    font-family: Lineto-Circular;
+    color: #7E7E7e;
+    font-size: 21px;
+    margin: 0 3px;
+}
+
+.intro-container h3 {
+    margin: 0;
+}
+
+.powering-machines {
+    display: flex;
+    gap: 10px;
+}
+
+.powering-machines h4 {
+    font-family: GBB;
+    color: #F3f3f3;
+    font-size: 40px;
+}
+
+.clock-drill-container {
+    width: 50%;
+}
+
+.robot-arm-container {
+    width: 50%;
+}

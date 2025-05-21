@@ -10,17 +10,19 @@
     top: 0;
     left: 0;
     margin: 0;
+    padding-right: 0;
     height: 11vh;
     width: 100%;
+    justify-content: center;
 }
 
 .img-container {
-    margin: 0.5vh;
+    margin: 0.5vh 0;
 }
 
 .img-logo {
     height: 100%;
-    width: 100%;
+    width: 9vw;
 }
 
 .top-tab-container {
@@ -50,6 +52,7 @@
 .feedback-container {
     font-family: "Daydream";
     margin-top: 1vh;
+    width: 9vw;
 }
 
 .feedback-h1 {

@@ -1,10 +1,25 @@
+.whole-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center the column */
+  background-color: #1A1919;
+  width: 100%;
+}
+
+.aside-w-searched-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vh;
+}
+
 .searched-item-container {
     display: flex;
     width: 100%;
     height: auto;
     background-color: #1A1919;
     padding: 3vh;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .item-article-container {
@@ -12,9 +27,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
+    /* margin-left: 3vw; */
     padding-top: 1vh;
     width: 60%;
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     border: 2px solid #8F9EBA;
 }
 
@@ -104,3 +120,4 @@
 .explore-options-container li {
     color: #737373;
 }
+

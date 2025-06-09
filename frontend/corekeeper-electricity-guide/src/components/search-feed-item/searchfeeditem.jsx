@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './searchfeeditem.css';
 import CraftingTable from '../crafting-table/craftingtable';
 import ItemBg from '../item-bg';
@@ -10,7 +11,7 @@ export default function SearchFeedItem({iName, iDesc, iImg, iMaterials, iMImgs, 
     return (
         <>
         <div className="feed-item-container">
-            <h2>{iName}</h2>
+            <h2><Link to={`/item/${iName}`}>{iName}</Link></h2>
             <p>{iDesc}</p>
             {iMaterials !== "None" ? (
                 <CraftingTable

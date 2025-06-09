@@ -8,7 +8,7 @@ import CraftingTable from '../crafting-table/craftingtable';
 import GifBg from '../gif-bg';
 import AsideTOC from '../aside-toc/aside-toc';
 
-export default function SearchedItemPage({item}) {
+export default function SearchedItemPage() {
     const { itemName } = useParams();
     const [curItem, setCurItem] = useState(
         {
@@ -73,7 +73,7 @@ export default function SearchedItemPage({item}) {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="contraptions-container">
+                                <div className="explore-more-container">
                                     <h3>Contraptions</h3>
                                     <ul>
                                         {curItem.iContraptions.map((item, index) => (

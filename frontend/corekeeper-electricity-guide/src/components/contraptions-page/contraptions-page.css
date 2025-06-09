@@ -1,4 +1,4 @@
-#basics-gif {
+#contraptions-gif {
     border: 2px solid #1A1919;
     border-radius: 30px;
     margin: 2vh;
@@ -6,13 +6,13 @@
     width: 40%;
 }
 
-#basics-gif-triple {
+#contraptions-gif-triple {
     border: 2px solid #1A1919;
     border-radius: 30px;
     margin: 2vh;
 }
 
-#basics-gif-special {
+#contraptions-gif-special {
     border: 2px solid #1A1919;
     border-radius: 30px;
     margin: 2vh;
@@ -39,6 +39,7 @@
     align-items: center;        
     background-color: #1A1919;
     width: 100%;
+    /* height: 89vh; */
 }
 
 .contraptions-container h1{

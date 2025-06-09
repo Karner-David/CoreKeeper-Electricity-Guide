@@ -6,15 +6,14 @@ export default function ContraptionItem({item}) {
     const [itemStuff, setItemStuff] = useState({
         item: item,
         numP: 4,
-        materials: "1 Generator, 5 Chests, 3 Robot Arms, 6 Electrical Wire",
         p1: "The Sorting System in the game is pretty simple, because of how the Robot Arm works. If the Robot Arm tries putting an item in a chest that is not already inside, and that chest has no more free space, then it just drops the item on top of the chest.",
-        gif1: "/how-tos/generatorWOWire.gif",
-        p2: "So, for a Sorting System, you just keep repeating that same pattern above and just need an input chest, and an overflow chest at the end to catch unsorted items!",
-        gif2: "/how-tos/generatorWOWire.gif",
-        p3: "Then you want to put the drill system like below and turn it on. It's no problem if you don't have enough seeds as the farm will constantly break growing wood and get seeds every now and then.",
-        gif3: "/how-tos/generatorWOWire.gif",
-        p4: "Then you want to put the drill system like below and turn it on. It's no problem if you don't     have enough seeds as the farm will constantly break growing wood and get seeds every now and then.",
-        gif4: "/how-tos/generatorWOWire.gif"
+        gif1: "/how-tos/SortingSystem-gif1.gif",
+        p2: "So, for a Sorting System, you'd think you just need to keep repeating that same pattern above, however, the Robot Arm will constantly remove stuff from the chest below, instead of just picking up the overflow items!",
+        gif2: "/how-tos/SortingSystem-gif2.gif",
+        p3: "To fix this, you just need to use a clocked drill to pull the overflow items, and conveyor them to the next Robot Arm!",
+        gif3: "/how-tos/SortingSystem-gif3.gif",
+        p4: "Then, you stack multiple of these to create your whole Sorting System, where the last chest can be the chest of unsorted items!",
+        gif4: "/how-tos/SortingSystem-gif4.gif"
     })
 
     const contraptionStyle = {
@@ -41,9 +40,6 @@ export default function ContraptionItem({item}) {
             </div>
             {active && (
                 <div className='contraption-content-container'>
-                    <div id='ci-center'>
-                        <p>Necessary Materials: {itemStuff.materials}</p>
-                    </div>
                     <p>{itemStuff.p1}</p>
                     <div id="ci-center">
                         <img id='cii-center' src={itemStuff.gif1} alt="" />
@@ -62,7 +58,7 @@ export default function ContraptionItem({item}) {
                                 <>
                                     <p>{itemStuff.p4}</p>
                                     <div id="ci-center">
-                                        <img id='cii-center' src={itemStuff.gif1} alt="" />
+                                        <img id='cii-center' src={itemStuff.gif4} alt="" />
                                     </div>
                                 </>
                             )}
@@ -78,9 +74,6 @@ export default function ContraptionItem({item}) {
 // each contraptionitem should have a useState of active or not
 
 {/* <h3>Auto-Smelter</h3>
-<h4>Necessary Materials: 3 Furnaces, 3 Kilns, 3 Fury Forges, 10 Robot Arms, 9 Conveyor Belts, 
-    16 Electrical Wire
-</h4>
 <p>The Auto-Smelter is similar to the Sorting System, but this time, a Robot Arm just drops
     the item on top of the furnace/kiln if the ore it's holding doesn't match the ore that
     is currently being smelted in the furnace/kiln.
@@ -94,11 +87,12 @@ export default function ContraptionItem({item}) {
     Arm can put the ore inside the Fury Forge, but can't pull out smelted ore. So, instead you 
     use the clock-drill mechanic. This will pull the smelted ore to behind the drill, and then 
     some conveyor belts can be used to connect it to the next Robot Arm.
-</p> */}
+</p> 
+<img src="/how-tos/generatorWOWire.gif" alt="" />
+*/}
 
 /*
 <h3>Auto-Wood Farm</h3>
-<h4>Necessary Items: </h4>
 <p> This farm works for any type of wood you want to grow like normal Wood, Coral Wood, or Gleam
     Wood. You first want to copy the layout shown below which is a 21x7 space outlined with tiles
     with 6 spaces of 2x6. And on the 4th 2x6, at the top left corner, replace the tile with your 
@@ -122,7 +116,6 @@ export default function ContraptionItem({item}) {
 
 /*
 <h3>Stack Splitter</h3>
-<h4>Necessary Items: </h4>
 <p>The Stack Splitter takes in a stack of an item, and splits it into 4 different groups. This is
     really only important when you want to have multiple, same systems running at the same time to increase
     speed. This is something used in the advanced auto smelter to run 4 auto smelting systems at the same
@@ -143,7 +136,6 @@ export default function ContraptionItem({item}) {
 
 /*
 <h3>Advanced Auto Smelter</h3>
-<h4>Necessary Materials: </h4>
 <p>The Advanced Auto Smelter is just a system of 4 Auto Smelters and each of these get a portion of an ore
     stack by using the Stack Splitter. Here you want to built 4 separate Auto Smelter systems like below:
 </p>

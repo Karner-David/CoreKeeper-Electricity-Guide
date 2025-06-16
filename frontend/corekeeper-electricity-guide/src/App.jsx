@@ -5,6 +5,7 @@ import NavBar from './components/navbar/navbar';
 import BasicsPage from './components/basics-page/basics-page';
 import ContraptionsPage from './components/contraptions-page/contraptions-page';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import createNewItem from './TEST.jsx'; 
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/item/:itemName" element={<SearchedItemPage />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
+      
       {/* <SearchedItemPage></SearchedItemPage> */}
       {/* <SearchFeedPage></SearchFeedPage> */}
       {/* <BasicsPage></BasicsPage> */}

@@ -38,6 +38,7 @@ export default function SearchBar({ onSearch }) {
         height: "30px",
         width: "30px",
         cursor: "pointer",
+        marginLeft: "5px",
     }
 
     const inputStyle = {

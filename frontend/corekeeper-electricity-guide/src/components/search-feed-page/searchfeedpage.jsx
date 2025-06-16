@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import NavBar from '../navbar/navbar';
 import SearchBar from '../searchbar/searchbar';
 import SearchFeedItem from '../search-feed-item/searchfeeditem';
+import createNewItem from '../../TEST';
 import './searchfeedpage.css';
 import '../fonts.css';
 
@@ -223,6 +224,7 @@ export default function SearchFeedPage({}) {
                         />
                     ))}
                 </div>
+                <createNewItem></createNewItem>
             </div>
         </div>
     )

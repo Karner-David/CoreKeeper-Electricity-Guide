@@ -2,19 +2,8 @@ import React, { useState, useEffect} from 'react';
 import MagnifyingGlass from '/magnifying_glass.png';
 import './searchbar.css';
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar({ value, onChange, onSearch }) {
     const [inputVal, setInputVal] = useState('');
-
-    const handleInputChange = (event) => {
-        setInputVal(event.target.value);
-    }
-
-    const handleKeyDown = (event) => {
-        if (event.key === "Enter") {
-            onSearch(inputVal);
-            setInputVal('');
-        }
-    }
 
     const imgClickedOn = () => {
         onSearch(inputVal);
@@ -62,9 +51,8 @@ export default function SearchBar({ onSearch }) {
                 </div>
                 <input type="text" 
                        placeholder="Search Here"
-                       value={inputVal}
-                       onChange={handleInputChange}
-                       onKeyDown={handleKeyDown}
+                       value={value}
+                       onChange={(e) => onChange(e.target.value)}
                        style={inputStyle}
                 />
             </div>

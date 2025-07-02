@@ -1,7 +1,7 @@
 .search-page-container {
     display: flex;
     width: 100%;
-    height: auto;
+    /* height: 80vh; */
     background-color: #1A1919;
     padding: 3vh;
     flex-direction: column;
@@ -14,6 +14,24 @@
     margin: auto;
     padding-top: 3vh;
     width: 70%;
+    height: auto;
+    min-height: 79vh;
     gap: 5px;
     justify-content: center;
+}
+
+#no-items {
+    margin-top: 5vh;
+    color: white;
+}
+
+#no-items-text {
+    font-family: Daydream;
+    font-size: 20px;
+}
+
+#no-items-img {
+    display: flex;
+    margin: auto;
+
 }

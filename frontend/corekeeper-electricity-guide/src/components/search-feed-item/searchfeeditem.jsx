@@ -4,7 +4,7 @@ import './searchfeeditem.css';
 import CraftingTable from '../crafting-table/craftingtable';
 import ItemBg from '../item-bg';
 
-export default function SearchFeedItem({iName, iDesc, iImg, iMaterials, iMImgs, iStation, iSImg}) {
+export default function SearchFeedItem({ iName, iDesc, iImg, iMaterials, iMImgs, iStation, iSImg}) {
 
 
 
@@ -15,6 +15,7 @@ export default function SearchFeedItem({iName, iDesc, iImg, iMaterials, iMImgs, 
             <p>{iDesc}</p>
             {iMaterials !== "None" ? (
                 <CraftingTable
+                    // key={key}
                     iName={iName}
                     iDesc={iDesc}
                     iImg={iImg} 

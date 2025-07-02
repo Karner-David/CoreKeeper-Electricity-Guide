@@ -1,7 +1,7 @@
 import React from 'react';
 import './craftingtable.css';
 
-export default function CraftingTable({iName, iImg, iMaterials, iMImgs, iStation, iSImg}) {
+export default function CraftingTable({ iName, iImg, iMaterials, iMImgs, iStation, iSImg}) {
   return (
         <div className="crafting-table table-responsive">
             <table 

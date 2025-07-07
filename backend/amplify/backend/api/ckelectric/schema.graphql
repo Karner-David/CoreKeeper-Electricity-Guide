@@ -2,8 +2,34 @@
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
-type Todo @model {
+type Item @model {
   id: ID!
   name: String!
-  description: String
+  desc: String!
+  descLonger: String!
+  img: String!
+  materials: [String]
+  materialImg: [String]
+  station: String
+  stationImg: String
+  howToUse: String!
+  howToGif: String!
+  exploreMoreItem: [String]!
+  exploreMoreContra: [String]!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type ContrapItem @model {
+  id: ID!
+  contrapName: String!
+  materials: String!
+  p1: String!
+  gif1: String!
+  p2: String!
+  gif2: String!
+  p3: String
+  gif3: String
+  p4: String
+  gif4: String
 }

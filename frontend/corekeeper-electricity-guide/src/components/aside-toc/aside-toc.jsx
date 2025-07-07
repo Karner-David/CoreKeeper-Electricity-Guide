@@ -3,8 +3,8 @@ import "../fonts.css";
 import './aside-toc.css';
 
 
-export default function AsideTOC({ headings }) {
-    const [activeId, setActiveId] = useState(headings[0]);
+export default function AsideTOC({page, headings }) {
+    const [activeId, setActiveId] = useState();
 
     const asideStyle = {
         display: "flex",
@@ -16,6 +16,7 @@ export default function AsideTOC({ headings }) {
     }
 
   useEffect(() => {
+    if (page === "basics") {
     const onScroll = () => {
       const mid = window.innerHeight / 2;
       let newActive = activeId;
@@ -39,6 +40,7 @@ export default function AsideTOC({ headings }) {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // set initial state
     return () => window.removeEventListener('scroll', onScroll);
+  }
   }, [headings, activeId]);
 
   return (
@@ -48,7 +50,7 @@ export default function AsideTOC({ headings }) {
           key={i}
           href={`#${item}`}
           className={`aside-text${activeId === item ? ' active' : ''}`}
-          onClick={() => setActiveId(item)}
+          // onClick={() => setActiveId(item)}
         >
           {item}
         </a>

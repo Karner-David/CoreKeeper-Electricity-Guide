@@ -10,6 +10,7 @@
     border: 2px solid #1A1919;
     border-radius: 30px;
     margin: 2vh;
+    width: 33%
 }
 
 #basics-gif-special {
@@ -38,11 +39,12 @@
     justify-items: center;
     align-items: center;        
     background-color: #1A1919;
-    width: 100%;
+    /* width: 100%; */
+    height: auto;
 }
 
 .basics-container h1{
-    margin: 3vh 0;
+    margin: 10px 0;
     font-family: DayDream;
     color: #4FB9F0;
     grid-area: title;
@@ -57,7 +59,7 @@
     top: 5vh;
     position: sticky;
     margin: 1rem 2vw;
-    margin-left: vw;
+
 }
 
 .border-article-container {
@@ -113,4 +115,9 @@
 
 .robot-arm-container {
     width: 50%;
+}
+
+.basics-right-aside {
+    grid-area: right;
+    width: 100%;
 }

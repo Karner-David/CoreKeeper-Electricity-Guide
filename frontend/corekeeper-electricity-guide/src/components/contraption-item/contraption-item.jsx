@@ -23,12 +23,12 @@ export default function ContraptionItem({item}) {
         width: "100%",
         border: "1px solid grey",
         borderRadius: "15px",
-        padding: "1vh",
+        // padding: "1vh",
     }
 
     return(
-        <div id={itemStuff.item} style={contraptionStyle}>
-            <div className='contraption-name-arrow-container'>
+        <div className="contraption-item" id={itemStuff.item} style={contraptionStyle} onClick={() => setActive(!active)}>
+            <div className={`contraption-name-arrow-container${active ? ' active' : ''}`}>
                 <h3>{itemStuff.item}</h3>
                 <div className="down-arrow-container">
                     <img src="/chevron_down.png" 

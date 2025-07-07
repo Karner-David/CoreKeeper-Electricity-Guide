@@ -12,14 +12,21 @@ export default function ContraptionsPage() {
         AdSm : "F",
     })
 
-    const headings = ["Introduction","Sorting System", "Auto-Smelter", "Auto-Wood Farm",
+    const handleActives = (key, newValue) => {
+        setActive(prevState => ({
+            ...prevState,
+            [key]: newValue
+        }));
+    }
+
+    const headings = ["Sorting System", "Auto-Smelter", "Auto-Wood Farm",
                       "Stack Splitter", "Advanced Auto Smelter"]
 
     return(
         <div className="contraptions-container">
             <h1>Contraptions</h1>
             <div className="contraptions-aside">
-                <AsideTOC headings={headings}></AsideTOC> 
+                <AsideTOC page="contraptions" headings={headings}></AsideTOC> 
             </div>
             <div className="border-contraptions-container">
                 <div className="contraptions-article-container">

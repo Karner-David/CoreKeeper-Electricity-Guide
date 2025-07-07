@@ -1,3 +1,8 @@
+html {
+    background-color: #1A1919;
+}
+
+
 #contraptions-gif {
     border: 2px solid #1A1919;
     border-radius: 30px;
@@ -38,12 +43,12 @@
     justify-items: center;
     align-items: center;        
     background-color: #1A1919;
-    width: 100%;
-    /* height: 89vh; */
+    /* width: 100%; */
+    height: auto;
 }
 
 .contraptions-container h1{
-    margin: 3vh 0;
+    margin: 10px 0;
     font-family: DayDream;
     color: #4FB9F0;
     grid-area: title;
@@ -58,7 +63,6 @@
     top: 5vh;
     position: sticky;
     margin: 1rem 2vw;
-    margin-left: vw;
 }
 
 .border-contraptions-container {
@@ -95,32 +99,4 @@
 
 .contraptions-intro-container h3 {
     margin: 0;
-}
-
-.powering-machines {
-    display: flex;
-    gap: 10px;
-}
-
-.powering-machines h4 {
-    font-family: GBB;
-    color: #F3f3f3;
-    font-size: 40px;
-}
-
-.clock-drill-container {
-    width: 50%;
-}
-
-.robot-arm-container {
-    width: 50%;
-}
-
-.sort-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border: 1px solid grey;
-    border-radius: 15px;
-    padding: 1vh;
 }

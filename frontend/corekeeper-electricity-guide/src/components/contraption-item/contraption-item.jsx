@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './contraption-item.css';
 
-export default function ContraptionItem({item}) {
-    const [active, setActive] = useState(false);
+export default function ContraptionItem({item, active, onToggle}) {
     const [itemStuff, setItemStuff] = useState({
         item: item,
         numP: 4,
@@ -27,14 +26,14 @@ export default function ContraptionItem({item}) {
     }
 
     return(
-        <div className="contraption-item" id={itemStuff.item} style={contraptionStyle} onClick={() => setActive(!active)}>
-            <div className={`contraption-name-arrow-container${active ? ' active' : ''}`}>
+        <div className="contraption-item" id={itemStuff.item} style={contraptionStyle}>
+            <div className={`contraption-name-arrow-container${active ? ' active' : ''}`} onClick={onToggle}>
                 <h3>{itemStuff.item}</h3>
                 <div className="down-arrow-container">
                     <img src="/chevron_down.png" 
                         alt="down arrow" 
                         className={`down-arrow${active ? ' active' : ''}`}
-                        onClick={() => setActive(!active)}
+                        onClick={onToggle}
                     />
                 </div>
             </div>

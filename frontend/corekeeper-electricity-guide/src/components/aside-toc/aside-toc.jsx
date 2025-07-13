@@ -3,7 +3,7 @@ import "../fonts.css";
 import './aside-toc.css';
 
 
-export default function AsideTOC({page, headings }) {
+export default function AsideTOC({page, headings, activeItems }) {
     const [activeId, setActiveId] = useState();
 
     const asideStyle = {
@@ -49,7 +49,7 @@ export default function AsideTOC({page, headings }) {
         <a
           key={i}
           href={`#${item}`}
-          className={`aside-text${activeId === item ? ' active' : ''}`}
+          className={`aside-text${activeItems.includes(item) ? ' active' : ''}`}
           // onClick={() => setActiveId(item)}
         >
           {item}

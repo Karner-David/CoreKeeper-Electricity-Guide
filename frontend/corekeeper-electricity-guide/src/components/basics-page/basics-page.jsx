@@ -11,7 +11,7 @@ export default function BasicsPage() {
         <div className="basics-container">
             <h1>Basics</h1>
             <div className="basics-aside">
-                <AsideTOC className="basics-aside" page="basics" headings={headings}></AsideTOC> 
+                <AsideTOC className="basics-aside" page="basics" headings={headings} activeItems={null}></AsideTOC> 
             </div>
             <div className="border-article-container">
                 <div className="basics-article-container">

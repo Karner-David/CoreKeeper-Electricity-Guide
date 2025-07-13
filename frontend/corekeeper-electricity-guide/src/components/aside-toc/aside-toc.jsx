@@ -49,7 +49,7 @@ export default function AsideTOC({page, headings, activeItems }) {
         <a
           key={i}
           href={`#${item}`}
-          className={`aside-text${activeItems.includes(item) ? ' active' : ''}`}
+          className={`aside-text${(page === "basics" && activeId === item)||(page === "contraptions" && activeItems.includes(item)) ? ' active' : ''}`}
           // onClick={() => setActiveId(item)}
         >
           {item}

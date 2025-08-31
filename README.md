@@ -9,11 +9,7 @@ A community-driven guide and reference tool for understanding electricity mechan
 - [About](#about)  
 - [Roadmap / To-Do List](#roadmap--to-do-list)  
 - [Features](#features)  
-- [Project Structure](#project-structure)  
-- [Getting Started](#getting-started)  
-- [Contributing](#contributing)  
 - [Credits & Links](#credits--links)  
-- [License](#license)
 
 ---
 

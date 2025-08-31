@@ -24,9 +24,6 @@ This project aims to provide an interactive, user-friendly guide to the electric
 - [ ] Need to put contraptions In 
 - [ ] Finish Gifs for all items  
 - [ ] Hyperlink explore more stuff  
-- [ ] Finalize descriptions for all listed items  
-- [ ] Add external links and credits (e.g., Core Keeper Wiki, fan guides, videos)  
-- [ ] Highlight expanded contraptions in UI sidebar or aside notes  
 
 ---
 

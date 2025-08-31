@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
 import { Amplify } from 'aws-amplify';
-import awsExports from '../../../backend/src/aws-exports.js';
+// import awsExports from '../../../backend/src/aws-exports.js';
+import awsExports from './amplify-config.js';
 import { ThemeProvider, defaultTheme } from '@aws-amplify/ui-react';
 
 import App from './App.jsx';

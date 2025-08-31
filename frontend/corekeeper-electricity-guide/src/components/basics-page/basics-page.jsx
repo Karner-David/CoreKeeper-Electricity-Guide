@@ -27,9 +27,9 @@ export default function BasicsPage() {
                             </div>
                             <p>There are also other options than just electrical wire. </p>
                             <ol>
-                                <li><Link to='/item/Logic_Circuit' id='rm-text-decoration'>Logic Circuit</Link>: allows electricity to flow once it receives 2 out of 3 inputs.</li>
-                                <li><Link to='/item/Delay_Circuit' id='rm-text-decoration'>Delay Circuit</Link>: has a 1 second delay between receiving input and emitting output.</li>
-                                <li><Link to='/item/Cross_Circuit' id='rm-text-decoration'>Cross Circuit</Link>: electricity can only flow straight from the side it came from.</li>
+                                <li><Link to='/item/Logic%20Circuit' id='rm-text-decoration'>Logic Circuit</Link>: allows electricity to flow once it receives 2 out of 3 inputs.</li>
+                                <li><Link to='/item/Delay%20Circuit' id='rm-text-decoration'>Delay Circuit</Link>: has a 1 second delay between receiving input and emitting output.</li>
+                                <li><Link to='/item/Cross%20Circuit' id='rm-text-decoration'>Cross Circuit</Link>: electricity can only flow straight from the side it came from.</li>
                             </ol>
                             <div className="gif-container">
                                 <img src="/how-tos/Logic_Circuit.gif" alt="" id='basics-gif-triple' />
@@ -54,7 +54,7 @@ export default function BasicsPage() {
                             <div className="clock-drill-container">
                                 <h4>Drills</h4>
                                 <p>The <Link to='/item/Drill' id='rm-text-decoration'>Drill</Link> has a special mechanic where it will pull items from the drill tip to 
-                                behind it. Literally, an item floats through the drill like it's on a <Link to='/item/Conveyor_Belt' id='rm-text-decoration'>Conveyor Belt</Link>.
+                                behind it. Literally, an item floats through the drill like it's on a <Link to='/item/Conveyor%20Belt' id='rm-text-decoration'>Conveyor Belt</Link>.
                                 </p>
                                 <div className="gif-container">
                                     <img src="/how-tos/Drill_Conveyor.gif" alt="" id='basics-gif-special' />
@@ -74,7 +74,7 @@ export default function BasicsPage() {
                             </div>
                             <div className="robot-arm-container">
                                 <h4>Robot Arm</h4>
-                                <p>The <Link to='/item/Robot_Arm' id='rm-text-decoration'>Robot Arm</Link> is useful for its ability to pick up items under its hand and place the item
+                                <p>The <Link to='/item/Robot%20Arm' id='rm-text-decoration'>Robot Arm</Link> is useful for its ability to pick up items under its hand and place the item
                                     behind it. 
                                 </p>
                                 <div className="gif-container">
@@ -99,7 +99,7 @@ export default function BasicsPage() {
                         <h3 id='Next Steps'>Next Steps</h3>
                         <p>Now that you have run through the basics, check out Contraptions to find some systems that you could add to your base!</p>
                         <ul>
-                            <li><Link to='/contraptions/' id='rm-text-decoration'>Sorting System</Link></li>
+                            <li><Link to='/contraptions/' id='rm-text-decoration' state={{ alrActive: ['Sorting System'] }}>Sorting System</Link></li>
                             <li><Link to='/contraptions/' id='rm-text-decoration'>Auto-Smelter</Link></li>
                             <li><Link to='/contraptions/' id='rm-text-decoration'>Auto-Crop Farm</Link></li>
                             <li><Link to='/contraptions/' id='rm-text-decoration'>Auto-Wood Farm</Link></li>

@@ -33,7 +33,7 @@ export default function ContraptionItem({item, active, onToggle}) {
                     <img src="/chevron_down.png" 
                         alt="down arrow" 
                         className={`down-arrow${active ? ' active' : ''}`}
-                        onClick={onToggle}
+                        
                     />
                 </div>
             </div>
@@ -77,17 +77,17 @@ export default function ContraptionItem({item, active, onToggle}) {
     the item on top of the furnace/kiln if the ore it's holding doesn't match the ore that
     is currently being smelted in the furnace/kiln.
 </p>
-<img src="/how-tos/generatorWOWire.gif" alt="" />
+<img src="/how-tos/AutoSmelter-gif1.gif" alt="" />
 <p>Thus, we can repeat this pattern, and have 3 furnaces for Copper, Tin, and Iron,
     3 kilns for Gold, Scarlet, and Octarine.
 </p>
-<img src="/how-tos/generatorWOWire.gif" alt="" />
+<img src="/how-tos/AutoSmelter-gif2.gif" alt="" />
 <p>Then, for the Galaxite, Solarite, and Pandorium ores that require the Fury Forge, the Robot 
     Arm can put the ore inside the Fury Forge, but can't pull out smelted ore. So, instead you 
     use the clock-drill mechanic. This will pull the smelted ore to behind the drill, and then 
     some conveyor belts can be used to connect it to the next Robot Arm.
 </p> 
-<img src="/how-tos/generatorWOWire.gif" alt="" />
+<img src="/how-tos/AutoSmelter-gif3.gif" alt="" />
 */}
 
 /*

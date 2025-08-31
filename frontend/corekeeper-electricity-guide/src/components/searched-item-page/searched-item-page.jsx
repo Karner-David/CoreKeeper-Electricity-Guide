@@ -8,60 +8,90 @@ import ItemBg from '../item-bg';
 import CraftingTable from '../crafting-table/craftingtable';
 import GifBg from '../gif-bg';
 import AsideTOC from '../aside-toc/aside-toc';
+import { generateClient } from "aws-amplify/api";
+import { fetchItems, fetchItemsByName } from '../../graphql/items';
+const client = generateClient();
+
 
 export default function SearchedItemPage() {
     const { itemName } = useParams();
-    const [curItem, setCurItem] = useState(
-        {
-            iName: "Electricity Generator",
-            iDesc: "An Electricity Generator can generate electricity with a strength of 23 tiles.",
-            iDescLonger: "An Electricity Generator can generate electricity with a strength of 23 tiles. Often times this item is the go to power source when the player wants to leave a machine constantly running.",
-            iHowToUse: "Place down the generator and then at any of the sides, put either an electrical wire or a machine to conduct electricity or power a machine.",
-            iImg: "/item-thumbnails/generator.png",
-            iMaterials: ["10 Copper Bar"],
-            iMImgs: ["/item-thumbnails/copper_bar.webp"],
-            iStation: "Electronics Table",
-            iSImg: ["/item-thumbnails/electronics_table.webp"],
-            iHowToGif: "/how-tos/generatorWOWire.gif",
-            iExploreMore: ["Electrical_Wire", "Lamp", "Robot_Arm", "Crude_Drill", "Drill"],
-            iContraptions: ["Electric_Clock, Sorting_System", "Auto_Smelting", "Auto_Wood_Farm"],
-        },);
+    const [curItem, setCurItem] = useState();
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchItems, setSearchItems] = useState([]);
 
-    const headings = [curItem.iName, "Crafting", "How To Use", "Explore More"];
+    const headings = [itemName, "Crafting", "How To Use", "Explore More"];
+    
+    useEffect(() => {
+        fetchItemsByName(itemName).then(setCurItem);
+        fetchItems().then(setSearchItems);
+    }, [itemName])
+
+    const filteredItems = searchItems.filter((item) => 
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+
+    const suggestions = searchItems
+        .filter((item) =>
+            searchTerm &&
+            item?.name &&
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+
+    console.log(suggestions)
+
+    if (!curItem) {
+        return <div>Loading...</div>;
+    }
 
     return(
         <div className='whole-page'>
             <div className="aside-w-searched-container">
-                <SearchBar></SearchBar>
+                <SearchBar 
+                    value={searchTerm}
+                    onChange={setSearchTerm}
+                    onSearch={(term) => {
+                        const matched = searchItems.find(item =>
+                            item.name.toLowerCase() === searchTerm.toLowerCase()
+                        );
+                        if (matched) {
+                            window.location.href = `/item/${matched.name}`;
+                        }
+                    }}
+                    onItemPage={true}
+                    suggestions={suggestions}
+                    onSelect={(item) => {
+                        setSearchTerm(item.name);
+                        window.location.href = `/item/${item.name}`;
+                }}/>
                 <div className="searched-item-container">
                     {/* <AsideTOC headings={headings}></AsideTOC> */}
                     <div className="item-article-container">
                         <div className="name-desc-img-container">
                             <div className="name-desc-container">
-                                <h2>{curItem.iName}</h2>
-                                <p>{curItem.iDescLonger}</p>
+                                <h2>{curItem.name}</h2>
+                                <p>{curItem.descLonger}</p>
                             </div>
-                            <ItemBg itemImg={curItem.iImg} width="30%" height="100%"></ItemBg>
+                            <ItemBg itemImg={curItem.img} width="175px" height="175px"></ItemBg>
                         </div>
                         <div className="crafting-container">
                             <h2>Crafting</h2>
                             <div className="searced-item-table-container">
                                 <CraftingTable 
-                                    iName={curItem.iName} 
-                                    iImg={curItem.iImg}
-                                    iMaterials={curItem.iMaterials}
-                                    iMImgs={curItem.iMImgs}
-                                    iStation={curItem.iStation}
-                                    iSImg={curItem.iSImg}
+                                    iName={curItem.name} 
+                                    iImg={curItem.img}
+                                    iMaterials={curItem.materials}
+                                    iMImgs={curItem.materialImg}
+                                    iStation={curItem.station}
+                                    iSImg={curItem.stationImg}
                                 />
                             </div>
                         </div>
                         <div className="how-to-use-container">
                             <div className="how-to-desc-container">
                                 <h2>How To Use</h2>
-                                <p>{curItem.iHowToUse}</p>
+                                <p>{curItem.howToUse}</p>
                             </div>
-                            <GifBg gif={curItem.iHowToGif}/>
+                            <GifBg gif={curItem.howToGif}/>
                         </div>
                         <div className="explore-more-container">
                             <h2>Explore More</h2>
@@ -69,7 +99,7 @@ export default function SearchedItemPage() {
                                 <div className="other-items-container">
                                     <h3>Other Items</h3>
                                     <ul>
-                                        {curItem.iExploreMore.map((item, index) => (
+                                        {curItem.exploreMoreItem.map((item, index) => (
                                             <li>{item}</li>
                                         ))}
                                     </ul>
@@ -77,7 +107,7 @@ export default function SearchedItemPage() {
                                 <div className="explore-more-container">
                                     <h3>Contraptions</h3>
                                     <ul>
-                                        {curItem.iContraptions.map((item, index) => (
+                                        {curItem.exploreMoreContra.map((item, index) => (
                                             <li>{item}</li>
                                         ))}
                                     </ul>

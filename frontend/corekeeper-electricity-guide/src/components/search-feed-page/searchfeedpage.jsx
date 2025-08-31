@@ -20,7 +20,7 @@ export default function SearchFeedPage({}) {
 
     useEffect(() => {
         fetchItems().then(setFeedItems);
-    });
+    }, [setFeedItems]);
 
     const filteredItems = feedItems.filter((item) => 
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -30,7 +30,7 @@ export default function SearchFeedPage({}) {
     return(
         <div>
             <div className="search-page-container">
-                <SearchBar value={searchTerm} onChange={setSearchTerm}></SearchBar>
+                <SearchBar value={searchTerm} onChange={setSearchTerm} onItemPage={false} ></SearchBar>
                 <div className="feed-container">
                     {filteredItems.length === 0 ? (
                         <div id="no-items">

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './contraptions-page.css';
 import AsideTOC from '../aside-toc/aside-toc';
 import ContraptionItem from '../contraption-item/contraption-item';
 
 export default function ContraptionsPage() {
-    const [active, setActive] = useState([])
+    const location = useLocation();
+    const { alrActive } = location.state || {};
+    const [active, setActive] = useState(alrActive || [])
 
     const toggleActives = (id) => {
+        console.log("Toggle");
         setActive((prevState) => 
             prevState.includes(id) 
             ? prevState.filter(item => item !== id) 

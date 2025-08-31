@@ -1,0 +1,41 @@
+.fb-x-svg {
+    stroke: white;
+}
+
+.fb-x-svg:hover {
+    stroke: #a8acad;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    color: #f3f3f3;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.field input {
+    border-radius: 5px;
+}
+
+.field textarea {
+    border-radius: 5px;
+}
+
+.fb-submit {
+    width: 75.5%;
+    border-radius: 5px;
+}
+
+.fb-submit:hover {
+    background-color: #a8acad;
+}
+
+.fb-cancel {
+    width: 23%;
+    border-radius: 5px;
+}
+
+.fb-cancel:hover {
+    background-color: #a8acad;
+}

@@ -4,6 +4,7 @@ export default function ItemBg({itemImg, width, height}) {
 
     const containerStyle = {
         width: width,
+        minWidth: width,
         height: height,
         display: "flex",
         borderBottom: "4px solid #8D5D2B",
@@ -11,14 +12,14 @@ export default function ItemBg({itemImg, width, height}) {
         borderTop: "4px solid #634223",
         borderLeft: "4px solid #634223",
         backgroundColor: "#32210D",
-        margin: "auto",
         marginTop: "2px",
         marginBottom: "2px",
     }
 
     const imgStyle = {
-        width: "78%",
-        height: "78%",
+        width: "125px",
+        minWidth: "125px",
+        height: "125px",
         margin: "auto",
     }
 

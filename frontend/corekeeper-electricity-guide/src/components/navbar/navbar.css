@@ -58,4 +58,9 @@
 .feedback-h1 {
     font-size: small;
     color: #4FB9F0;
+    cursor: pointer;
+}
+
+.feedback-h1:hover {
+    color: white;
 }

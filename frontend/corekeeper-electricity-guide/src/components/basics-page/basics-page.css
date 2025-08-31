@@ -38,7 +38,7 @@
     grid-template-rows: 100px auto 70px;
     justify-items: center;
     align-items: center;        
-    background-color: #1A1919;
+    /* background-color: #1A1919; */
     /* width: 100%; */
     height: auto;
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;        /* center the column */
-  background-color: #1A1919;
+  /* background-color: #1A1919; */
   width: 100%;
 }
 
@@ -16,7 +16,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    background-color: #1A1919;
+    /* background-color: #1A1919; */
     padding: 3vh;
     flex-direction: row;
     justify-content: center;
@@ -40,7 +40,8 @@
     width: 100%;
     gap: 15px;
     margin: 0 10px;
-    align-items: center;
+    /* align-items: center; */
+    justify-content: space-between;
 }
 
 .name-desc-container {
@@ -64,6 +65,7 @@
 }
 
 .crafting-container {
+    height: auto;
     margin: 0 10px;
 }
 
@@ -82,16 +84,17 @@
 }
 
 .how-to-use-container {
-    margin: 0 10px;
+    width: 100%;
+    margin: 3rem 10px;
     display: flex;
-
+    justify-content: space-between;
 }
 
 .how-to-use-container p {
     color: #737373;
     font-family: Lineto-Circular;
     font-size: 21px;
-    width: 82%;
+    width: 100%;
 }
 
 .how-to-desc-container {

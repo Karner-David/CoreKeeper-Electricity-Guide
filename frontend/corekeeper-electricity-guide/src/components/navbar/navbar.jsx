@@ -4,8 +4,10 @@ import ckeLogo from '/Core-Keeper-Electricity-Logo.png';
 import navbar_bg from '/Contraptions_Screen.png';
 import '../fonts.css';
 import './navbar.css';
+import FeedbackPopup from '../feedback-popup/feedback-popup';
 
 export default function NavBar({}) {
+    const [feedbackActive, setFeedbackActive] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -48,12 +50,15 @@ export default function NavBar({}) {
                     </h1>
             </div>
             <div className="feedback-container">
-                <h1 className='feedback-h1'
-                    onClick={() => navigate('/feedback')}
+                {/* <h1 className='feedback-h1'
+                    onClick={() => setFeedbackActive(true)}
                     >
                     Feedback
-                </h1>
+                </h1> */}
             </div>
+            {feedbackActive && (
+                <FeedbackPopup onClose={() => setFeedbackActive(false)}/>
+            )}
         </div>
     );
 };

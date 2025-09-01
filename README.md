@@ -2,6 +2,8 @@
 
 A community-driven guide and reference tool for understanding electricity mechanics and automation in **Core Keeper**.
 
+[https://core-keeper-electricity-guide.vercel.app](https://core-keeper-electricity-guide.vercel.app)
+
 ---
 
 ## Table of Contents
